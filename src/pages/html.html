@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link" href="html.html">HTML</a>
+        <a class="navigation__link" href="css.html">CSS</a>
+        <a class="navigation__link navigation__link--end" href="js.html">JavaScript</a>
+      </nav>
+      <button class="hamburger hamburger--js">Hamburger</button>
+    </header>
+
+    <main class="main">
+      
+
+      <header class = "main__heading">
+        <h1 class = "main__heading-text">HTML</h1>
+      </header>
+
+      <section class="upper-heading">
+        <img src="../assets/img/logotest.jpg" alt="Zdjęcie Michał Moń" />
+        <div>
+        <h2 class = "upper-heading__title">Zmagania z hipertekstowym językiem znacznikowym</h2>
+        <p class = "upper-heading__text">
+          Czyli chleb powszedni każdego web-developera oraz mój dziennik nauki
+          tego wspaniałego języka.
+        </p>
+      </div>
+      </section>
+
+      <section class="articles">
+        <h2 class="articles__main-heading-style">Notatki</h2>
+        <article class="articles__style">
+          <h3 class="articles__heading-style">Tydzień II</h3>
+          Podstawowe semantyczne tagi, bardzo miłe i przydatne informacje.
+        </article>
+
+        <article class="articles__style">
+          <h3 class="articles__heading-style">Tydzień III</h3>
+          Kolejne tagi oraz nawigacja po stronach.
+        </article>
+
+        <article class="articles__style">
+          <h3 class="articles__heading-style">Tydzień IV</h3>
+          Rozbudowywanie stronki ciąg dalszy.
+        </article>
+
+        <article class="articles__style">
+          <h3 class="articles__heading-style">Tydzień V</h3>
+          Głównie:
+          <ol>
+            <li>Tabele</li>
+            <li>Listy</li>
+          </ol>
+        </article>
+
+        <article class="articles__style">
+          <h3 class="articles__heading-style">Tydzień VI</h3>
+          W tym tygodniu sporo formularzy, więc pora się nimi pobawić:
+          <form method="POST" action="http://dev.cotenfrontend.pl/" class="articles__form">
+            <fieldset>
+              <legend>Jak oceniasz moją stronę szkoleniową WTF?</legend>
+              <p>
+                <label class="articles__form-item"><input name="rating" type="radio" value="very nice">Very nice</label>
+                <label class="articles__form-item"><input name="rating" type="radio" value="meh">Meh</label>
+                <label class="articles__form-item"><input name="rating" type="radio" value="...">...</label>
+                <label class="articles__form-item"><input name="submit" type="submit" value="Wyślij formularz"></label>            
+              </p>
+            </fieldset>
+        </article>
+      </section>
+
+
+      <footer class = "footer">
+        Wszystkie prawa zastrzeżone.
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,13 +1,194 @@
-@import "~normalize.css";
+@media screen and (min-width: 600px){
+    body {
+        display: grid;
+        grid-template-areas: ". navigation ." ". main .";
+        grid-template-columns: 75px 1fr 75px;
+        background: #757F9A;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+  .header{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    grid-area: navigation;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: antiquewhite;
+  }
+    
+    .navigation__link {
+      color: black;
+      border-right: 1px solid #07020d;
+      padding: 0px 10px;
+      &--homepage{
+        color: red;
+      }
+      &--end{
+          border: 0px;
+      }
+    }
+    
+    .main{
+      grid-area: main;
+    }
+    
+    .upper-heading {
+      padding: 20px;
+      margin-bottom: 5px;
+      border: 5px solid black;
+      border-radius: 20px;
+      background-color: rgb(242, 239, 247);
+      display: flex;
+      &__title{
+            color: #07020d;
+      }
+    }
+    
+    
+    .articles {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid black;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: rgb(242, 239, 247);
+      &__style{
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #e65a5a;
+      }
+      &__heading-style::before{
+        content: "";
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background-color: red;
+        border-radius: 50%;
+        margin-right: 16px;
+      }
+      &__form-item{
+        display: block;
+        margin: 10px 0;
+      }
+    }
+ 
+    img {
+      height: 150px;
+      width: 130px;
+      display: block;
+      padding: 16px;
+    }
+    
+    .hamburger{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 599px){
+    body {
+      display: grid;
+      grid-template-areas: ". navigation ." ". main .";
+      grid-template-columns: 75px 1fr 75px;
+      background: #757F9A;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    
+    a {
+      text-decoration: none;
+    }
+  
+    .main{
+      margin-top: 60px;
+    }
+    
+    .header {
+      background-color: antiquewhite;
+      position: fixed;
+      min-height: 60px;
+      top: 0;
+      width: 100%;
+      grid-area: navigation;
+      display: block;
+    }
 
-@import "_variables";
-@import "modules/hello.scss";
+    .navigation{
+      display: none;
+      &--open{
+        display: block;
+      }
+      &__link{
+        color: black;
+        padding: 10px;
+        border: 1px solid black;
+        display:block;
+        &--homepage{
+          color: red;
+        }
+      }
+    }
+  
+    .hamburger{
+      position: absolute;
+      top: 16px; 
+      right: 16px;
+      
+    }
+    
+    .main{
+      grid-area: main;
+      color: hotpink;
+    }
+    
+    .upper-heading {
+      padding: 20px;
+      margin-bottom: 5px;
+      border: 5px solid black;
+      border-radius: 20px;
+      background-color: rgb(242, 239, 247);
+      display: flex;
+    }
+    
+    
+    .articles {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid black;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: rgb(242, 239, 247);
+      &__style{
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #e65a5a;
+      }
+      &__form-item{
+        display: block;
+        margin: 10px 0;
+      }
+    }
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+      
+    .upper-heading__title {
+      color: #07020d;
+    }
+    
+    img {
+      height: 150px;
+      width: 130px;
+      display: block;
+      padding: 16px;
+    }
+  }
+  
