@@ -1,11 +1,18 @@
+
+:root{
+  --text-color:black;
+  --background-color: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+}
+
+
 @media screen and (min-width: 600px){
     body {
         display: grid;
         grid-template-areas: ". navigation ." ". main .";
         grid-template-columns: 75px 1fr 75px;
         background: #757F9A;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: var(--background-color);  /* Chrome 10-25, Safari 5.1-6 */
+        background: var(--background-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
     a {
@@ -39,6 +46,7 @@
     
     .main{
       grid-area: main;
+      color: var(--text-color);
     }
     
     .upper-heading {
